@@ -1,19 +1,21 @@
 'use strict'
 import React, { Component } from 'react'
 import { ListView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import EventDetails from '../components/HomeScreen/EventDetails'
 import MainToolBar from '../components/MainToolBar'
-import ViewContainer from '../components/ViewContainer'
+import ScreenContainer from '../components/ScreenContainer'
+import SectionHeader from '../components/SectionHeader'
 
 const events = {
     "Current Events": [
-        {id: "1", title: "Skii Trip", date: "12/07", location: "Tahoe"},
-        {id: "2", title: "Bar Drinking", date: "12/07", location: "Capitol Hill"},
-        {id: "3", title: "Karoake", date: "12/07", location: "International District"}
+        {id: "1", host: "Justin Wei", title: "EDC", date: "Wednesday, December 07", time: "7:00 PM", location: "Las Vegas Strip", addressLine1: "3355 S Las Vegas Blvd", addressLine2: "Las Vegas, NV"},
+        {id: "2", host: "Nhat Doan", title: "Bar Drinking", date: "Wednesday, December 07", time: "11:00 PM", location: "Capitol Hill", addressLine1: "4508 University Way", addressLine2: "Seattle, WA"},
+        {id: "3", host: "Ivan Ma", title: "Karoake", date: "Wednesday, December 07", time: "9:00 AM", location: "International District", addressLine1: "3333 Battery Road", addressLine2: "Seattle, WA"}
     ],
     "Upcoming Events": [
-        {id: "4", title: "Shiro's", date: "12/08", location: "Downtown"},
-        {id: "5", title: "Board Game Night", date: "12/09", location: "Insignia"},
-        {id: "6", title: "Sky Diving", date: "12/09", location: "Sky"}
+{id: "1", host: "Justin Wei", title: "EDC", date: "Thursday, December 08", time: "7:00 PM", location: "Las Vegas Strip", addressLine1: "3355 S Las Vegas Blvd", addressLine2: "Las Vegas, NV"},
+        {id: "2", host: "Nhat Doan", title: "Bar Drinking", date: "Friday, December 09", time: "11:00 PM", location: "Capitol Hill", addressLine1: "4508 University Way", addressLine2: "Seattle, WA"},
+        {id: "3", host: "Ivan Ma", title: "Karoake", date: "Friday, December 09", time: "9:00 AM", location: "International District", addressLine1: "3333 Battery Road", addressLine2: "Seattle, WA"}
     ]
 }
 
@@ -30,18 +32,16 @@ class HomeScreen extends Component {
 
     _renderEventSectionHeader(sectionData, section) {
         return (
-            <View style={styles.eventSection}>
-                <Text style={styles.eventSectionText}>{section}</Text>
-            </View>
+            <SectionHeader
+                title={section} />
         )
     }
 
     _renderEventRow(details) {
         return (
-            <TouchableOpacity style={styles.eventRow} onPress={(event) => this._navigateToEventDetails(details)}>
-                <Text style={styles.eventRowText}>{details.title}</Text>
-                <Text style={styles.eventRowText}>{details.date}</Text>
-                <Text style={styles.eventRowText}>{details.location}</Text>
+            <TouchableOpacity onPress={(event) => this._navigateToEventDetails(details)}>
+                <EventDetails 
+                    {...details} />
             </TouchableOpacity>
         )
     }
@@ -55,16 +55,15 @@ class HomeScreen extends Component {
 
     render() {
         return (
-            <ViewContainer>
+            <ScreenContainer>
                 <MainToolBar />
-                <View style={styles.main_container}>
-                <ListView
-                    style={styles.current_events}
-                    dataSource={this.state.dataSource}
-                    renderRow={this._renderEventRow.bind(this)}
-                    renderSectionHeader={this._renderEventSectionHeader} />
+                <View style={styles.mainContainer}>
+                    <ListView
+                        dataSource={this.state.dataSource}
+                        renderRow={this._renderEventRow.bind(this)}
+                        renderSectionHeader={this._renderEventSectionHeader} />
                 </View>
-            </ViewContainer>
+            </ScreenContainer>
         )
     }
 
@@ -72,39 +71,10 @@ class HomeScreen extends Component {
 
 const styles = StyleSheet.create({
 
-    main_container: {
+    mainContainer: {
         flex: 1,
         backgroundColor: "#F6F7F8",
-    },
-
-    eventSection: {
-        flexDirection: 'column',
-        backgroundColor: '#2196F3',
-        alignItems: 'flex-start',
-        justifyContent: 'center',
-        padding: 6
-    }, 
-
-    eventSectionText: {
-        fontSize: 16,
-        color: 'white'
-    },
-
-    eventRow: {
-        paddingVertical: 20,
-        paddingLeft: 16,
-        borderTopColor: 'white',
-        borderLeftColor: 'white',
-        borderRightColor: 'white',
-        borderBottomColor: '#E0E0E0',
-        borderWidth: 1
-    },
-
-    eventRowText: {
-        color: '#212121',
-        fontSize: 16
     }
-
 
 });
 

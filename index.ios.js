@@ -8,7 +8,7 @@ class ReactNativeTutorial extends Component {
     render() {
         return (
             <AppNavigator 
-                initialRoute={{ ident: "Login" }} />
+                initialRoute={{ ident: "Home" }} />
         )
     }
 

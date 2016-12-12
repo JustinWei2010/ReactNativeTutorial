@@ -15,18 +15,18 @@ class MainToolBar extends Component {
 
     render() {
         return (
-            <View style={styles.toolbar}>
-                <Text style={styles.toolbar_logo}>ETA Logo</Text>
+            <View style={styles.toolBar}>
+                <Text style={styles.toolBarLogo}>ETA Logo</Text>
                 <Icon 
                     name="ios-refresh" 
                     size={30} 
                     onPress={this._refreshPress} 
-                    style={styles.refresh_button} />
+                    style={styles.refreshButton} />
                 <Icon 
                     name="ios-settings" 
                     size={30} 
                     onPress={this._settingsPress} 
-                    style={styles.settings_button} />
+                    style={styles.settingsButton} />
 
             </View>
         )
@@ -36,25 +36,25 @@ class MainToolBar extends Component {
 
 const styles = StyleSheet.create({
 
-    toolbar: {
+    toolBar: {
         backgroundColor: '#3F51B5',
         flexDirection: "row",
         alignItems: "center",
         paddingTop: (Platform.OS === 'ios') ? 25 : 0
     },
 
-    toolbar_logo: {
+    toolBarLogo: {
         color: "#fff",
         paddingLeft: 6,           
         flex: 1,
         alignItems:"flex-start",
     },
 
-    refresh_button: {
+    refreshButton: {
         paddingRight: 10,
     },
 
-    settings_button: {
+    settingsButton: {
         paddingRight: 6
     }
 

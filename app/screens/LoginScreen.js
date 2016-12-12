@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import { Navigator, StyleSheet, Text, View } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
-import ViewContainer from '../components/ViewContainer'
+import ScreenContainer from '../components/ScreenContainer'
 
 class HomeScreen extends Component {
 
@@ -14,8 +14,8 @@ class HomeScreen extends Component {
 
     render() {
         return (
-            <ViewContainer>
-                <View style={styles.main_container}>
+            <ScreenContainer>
+                <View style={styles.mainContainer}>
                     <View style={styles.logo}>
                         <Text>
                             App Logo
@@ -28,7 +28,7 @@ class HomeScreen extends Component {
                         Login with Facebook
                     </Icon.Button>
                 </View>
-            </ViewContainer>
+            </ScreenContainer>
         )
     }
 
@@ -36,7 +36,7 @@ class HomeScreen extends Component {
 
 const styles = StyleSheet.create({
 
-    main_container: {
+    mainContainer: {
         margin: 30,
         flex: 1
     },
