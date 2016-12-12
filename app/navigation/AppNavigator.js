@@ -1,6 +1,7 @@
 'use strict'
 import React, { Component } from 'react'
 import { Navigator, StyleSheet, Text } from 'react-native'
+import EventDetailsScreen from '../screens/EventDetailsScreen'
 import HomeScreen from '../screens/HomeScreen'
 import LoginScreen from '../screens/LoginScreen'
 
@@ -20,6 +21,13 @@ class AppNavigator extends Component {
                 return (
                     <HomeScreen
                         {...globalNavigatorProps} />
+                )
+
+            case "EventDetails":
+                return (
+                    <EventDetailsScreen
+                        {...globalNavigatorProps}
+                        event={route.details} />
                 )
 
             default:

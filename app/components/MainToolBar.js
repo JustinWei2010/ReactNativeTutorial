@@ -1,6 +1,6 @@
 'use strict'
 import React, { Component } from 'react'
-import { Alert, StyleSheet, Text, View } from 'react-native'
+import { Alert, Platform, StyleSheet, Text, View } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons';
 
 class MainToolBar extends Component {
@@ -31,20 +31,21 @@ class MainToolBar extends Component {
             </View>
         )
     }
+
 }
 
 const styles = StyleSheet.create({
 
     toolbar: {
-        backgroundColor: "#81c04d",
-        paddingTop: 30,
+        backgroundColor: '#3F51B5',
         flexDirection: "row",
-        alignItems: "center"
+        alignItems: "center",
+        paddingTop: (Platform.OS === 'ios') ? 25 : 0
     },
 
     toolbar_logo: {
         color: "#fff",
-        paddingLeft: 20,           
+        paddingLeft: 6,           
         flex: 1,
         alignItems:"flex-start",
     },
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
     },
 
     settings_button: {
-        paddingRight: 20
+        paddingRight: 6
     }
 
 })

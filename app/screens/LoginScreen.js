@@ -8,7 +8,7 @@ class HomeScreen extends Component {
 
     _loginWithFacebook() {
         this.props.navigator.push({
-          ident: "Home"
+            ident: "Home"
         })
     }
 
