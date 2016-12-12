@@ -1,13 +1,16 @@
 'use strict'
 import React, { Component } from 'react'
-import { Navigator, StyleSheet, Text } from 'react-native'
+import { BackAndroid, Navigator, StyleSheet, Text } from 'react-native'
 import EventDetailsScreen from '../screens/EventDetailsScreen'
 import HomeScreen from '../screens/HomeScreen'
 import LoginScreen from '../screens/LoginScreen'
 
+var _navigator // global navigator variable
+
 class AppNavigator extends Component {
 
     _renderScene(route, navigator) {
+        _navigator = navigator // set for android back callback
         var globalNavigatorProps = { navigator }
 
         switch(route.ident) {
@@ -47,5 +50,17 @@ class AppNavigator extends Component {
     }
 
 }
+
+// Callback for popping back stack when back button is pressed on android
+BackAndroid.addEventListener("hardwareBackPress", function() {
+
+    // If on first screen and back is pressed then exit app
+    if (_navigator.getCurrentRoutes().length === 1) {
+        return false
+    }
+    _navigator.pop()
+    return true
+
+});
 
 module.exports = AppNavigator
