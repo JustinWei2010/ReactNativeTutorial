@@ -1,6 +1,7 @@
 'use strict'
 import React, { Component } from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import Colors from "styles/Colors"
 
 export default class EventDetails extends Component {
 
@@ -25,12 +26,12 @@ const styles = StyleSheet.create({
         borderTopColor: 'white',
         borderLeftColor: 'white',
         borderRightColor: 'white',
-        borderBottomColor: '#E0E0E0',
+        borderBottomColor: Colors.darkGray,
         borderWidth: 1
     },
 
     eventText: {
-        color: '#212121',
+        color: 'black',
         fontSize: 16
     }
 

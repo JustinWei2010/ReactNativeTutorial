@@ -1,6 +1,7 @@
 'use strict'
 import React, { Component } from 'react'
 import { ListView, StyleSheet, Text, View } from 'react-native'
+import Colors from 'styles/Colors'
 import ETADetails from 'components/EventDetailsScreen/ETADetails'
 import EventDetails from 'components/EventDetailsScreen/EventDetails'
 import MainToolBar from 'components/MainToolBar'
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
 
     mainContainer: {
         flex: 1,
-        backgroundColor: "#F6F7F8",
+        backgroundColor: Colors.lightGray,
     },
 
     etaDetailsListContainer: {

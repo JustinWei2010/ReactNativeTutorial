@@ -1,6 +1,7 @@
 'use strict'
 import React, { Component } from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
+import Colors from 'styles/Colors'
 
 class ETADetails extends Component {
 
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         paddingVertical: 10,
         paddingHorizontal: 20,
-        borderColor: '#E0E0E0',
+        borderColor: Colors.darkGray,
         borderWidth: 1,
         alignItems: 'center',
         justifyContent: 'flex-start'

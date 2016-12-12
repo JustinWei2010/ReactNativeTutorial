@@ -1,6 +1,7 @@
 'use strict'
 import React, { Component } from 'react'
 import { Navigator, StyleSheet, Text, View } from 'react-native'
+import Colors from 'styles/Colors'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ScreenContainer from 'components/ScreenContainer'
 
@@ -23,7 +24,7 @@ export default class HomeScreen extends Component {
                     </View>
                     <Icon.Button 
                         name="facebook" 
-                        backgroundColor="#3b5998" 
+                        backgroundColor={Colors.facebookBlue} 
                         onPress={this._loginWithFacebook.bind(this)}>
                         Login with Facebook
                     </Icon.Button>
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
 
     logo: {
         flex: 1,
-        backgroundColor: "#F6F7F8",
+        backgroundColor: Colors.lightGray,
         justifyContent: "center",
         alignItems: "center",
         marginBottom: 20

@@ -1,6 +1,7 @@
 'use strict'
 import React, { Component } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import Colors from 'styles/Colors'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class EventDetails extends Component {
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
         borderTopColor: "white",
         borderLeftColor: "white",
         borderRightColor: "white",
-        borderBottomColor: "#E0E0E0",
+        borderBottomColor: Colors.darkGray,
         borderWidth: 1
     },
 
@@ -98,7 +99,7 @@ const styles = StyleSheet.create({
     },
 
     detailsText: {
-        color: '#212121',
+        color: 'black',
         fontSize: 20
     }
 

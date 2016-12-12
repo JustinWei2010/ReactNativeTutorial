@@ -1,7 +1,9 @@
 'use strict'
 import React, { Component } from 'react'
-import { Alert, Platform, StyleSheet, Text, View } from 'react-native'
+import { Alert, Text, View } from 'react-native'
+import Colors from 'styles/Colors'
 import Icon from 'react-native-vector-icons/Ionicons';
+import PlatformStyleSheet from 'styles/PlatformStyleSheet'
 
 export default class MainToolBar extends Component {
 
@@ -34,17 +36,19 @@ export default class MainToolBar extends Component {
 
 }
 
-const styles = StyleSheet.create({
+const styles = PlatformStyleSheet.create({
 
     toolBar: {
-        backgroundColor: '#3F51B5',
+        backgroundColor: Colors.violetBlue,
         flexDirection: "row",
         alignItems: "center",
-        paddingTop: (Platform.OS === 'ios') ? 25 : 0
+        ios: {
+            paddingTop: 25
+        }
     },
 
     toolBarLogo: {
-        color: "#fff",
+        color: "white",
         paddingLeft: 6,           
         flex: 1,
         alignItems:"flex-start",

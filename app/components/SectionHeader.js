@@ -1,6 +1,7 @@
 'use strict'
 import React, { Component } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import Colors from 'styles/Colors'
 
 export default class SectionHeader extends Component {
 
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
 
     sectionHeaderContainer: {
         flexDirection: 'column',
-        backgroundColor: '#2196F3',
+        backgroundColor: Colors.lightBlue,
         alignItems: 'flex-start',
         justifyContent: 'center',
         padding: 6

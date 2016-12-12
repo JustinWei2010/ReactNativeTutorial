@@ -1,6 +1,7 @@
 'use strict'
 import React, { Component } from 'react'
 import { ListView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import Colors from 'styles/Colors'
 import EventDetails from 'components/HomeScreen/EventDetails'
 import MainToolBar from 'components/MainToolBar'
 import ScreenContainer from 'components/ScreenContainer'
@@ -73,7 +74,7 @@ const styles = StyleSheet.create({
 
     mainContainer: {
         flex: 1,
-        backgroundColor: "#F6F7F8",
+        backgroundColor: Colors.lightGray,
     }
 
 });
