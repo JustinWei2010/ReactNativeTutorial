@@ -1,13 +1,13 @@
 'use strict'
 import React, { Component } from 'react'
 import { BackAndroid, Navigator, StyleSheet, Text } from 'react-native'
-import EventDetailsScreen from '../screens/EventDetailsScreen'
-import HomeScreen from '../screens/HomeScreen'
-import LoginScreen from '../screens/LoginScreen'
+import EventDetailsScreen from 'screens/EventDetailsScreen'
+import HomeScreen from 'screens/HomeScreen'
+import LoginScreen from 'screens/LoginScreen'
 
 var _navigator // global navigator variable
 
-class AppNavigator extends Component {
+export default class AppNavigator extends Component {
 
     _renderScene(route, navigator) {
         _navigator = navigator // set for android back callback
@@ -62,5 +62,3 @@ BackAndroid.addEventListener("hardwareBackPress", function() {
     return true
 
 });
-
-module.exports = AppNavigator

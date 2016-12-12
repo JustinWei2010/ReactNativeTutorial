@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
-class EventDetails extends Component {
+export default class EventDetails extends Component {
 
     render() {
         return (
@@ -35,5 +35,3 @@ const styles = StyleSheet.create({
     }
 
 })
-
-module.exports = EventDetails

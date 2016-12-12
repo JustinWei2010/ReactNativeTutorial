@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native'
 
-class ScreenContainer extends Component {
+export default class ScreenContainer extends Component {
     render() {
         return (
             <View style={styles.viewContainer}>
@@ -22,5 +22,3 @@ const styles = StyleSheet.create({
     }
 
 })
-
-module.exports = ScreenContainer

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-class EventDetails extends Component {
+export default class EventDetails extends Component {
 
     constructor(props) {
         super(props);
@@ -103,5 +103,3 @@ const styles = StyleSheet.create({
     }
 
 });
-
-module.exports = EventDetails

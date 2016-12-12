@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { Alert, Platform, StyleSheet, Text, View } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons';
 
-class MainToolBar extends Component {
+export default class MainToolBar extends Component {
 
     _refreshPress() {
         Alert.alert("Refresh Events")
@@ -59,5 +59,3 @@ const styles = StyleSheet.create({
     }
 
 })
-
-module.exports = MainToolBar

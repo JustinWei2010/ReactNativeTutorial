@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-class SectionHeader extends Component {
+export default class SectionHeader extends Component {
 
     render() {
         return (
@@ -30,5 +30,3 @@ const styles = StyleSheet.create({
     }
 
 })
-
-module.exports = SectionHeader

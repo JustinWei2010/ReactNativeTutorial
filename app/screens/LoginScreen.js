@@ -2,9 +2,9 @@
 import React, { Component } from 'react'
 import { Navigator, StyleSheet, Text, View } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
-import ScreenContainer from '../components/ScreenContainer'
+import ScreenContainer from 'components/ScreenContainer'
 
-class HomeScreen extends Component {
+export default class HomeScreen extends Component {
 
     _loginWithFacebook() {
         this.props.navigator.push({
@@ -50,5 +50,3 @@ const styles = StyleSheet.create({
     }
 
 });
-
-module.exports = HomeScreen

@@ -1,11 +1,11 @@
 'use strict'
 import React, { Component } from 'react'
 import { ListView, StyleSheet, Text, View } from 'react-native'
-import ETADetails from '../components/EventDetailsScreen/ETADetails'
-import EventDetails from '../components/EventDetailsScreen/EventDetails'
-import MainToolBar from '../components/MainToolBar'
-import ScreenContainer from '../components/ScreenContainer'
-import SectionHeader from '../components/SectionHeader'
+import ETADetails from 'components/EventDetailsScreen/ETADetails'
+import EventDetails from 'components/EventDetailsScreen/EventDetails'
+import MainToolBar from 'components/MainToolBar'
+import ScreenContainer from 'components/ScreenContainer'
+import SectionHeader from 'components/SectionHeader'
 
 const etas = [
     {userId: "1", personName: "Justin Wei", etaTime: "Arrived", etaDistance: ""},
@@ -14,7 +14,7 @@ const etas = [
     {userId: "4", personName: "Don Tian", etaTime: "10 mins", etaDistance: "2.8 mi"},
 ]
 
-class EventDetailsScreen extends Component {
+export default class EventDetailsScreen extends Component {
 
     constructor(props) {
         super(props);
@@ -64,5 +64,3 @@ const styles = StyleSheet.create({
     }
 
 });
-
-module.exports = EventDetailsScreen

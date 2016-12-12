@@ -7,7 +7,7 @@ class ETADetails extends Component {
     render() {
         return (
             <View style={styles.etaDetailsContainer}>
-                <Image style={styles.profileIcon} source={require('../../resources/profile.png')} />
+                <Image style={styles.profileIcon} source={require("resources/profile.png")} />
                 <View style={styles.etaTextContainer}>
                     <Text style={styles.personName}>{this.props.personName}</Text>
                     <Text style={styles.etaTime}>{this.props.etaTime}</Text>

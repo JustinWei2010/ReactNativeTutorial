@@ -1,10 +1,10 @@
 'use strict'
 import React, { Component } from 'react'
 import { ListView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import EventDetails from '../components/HomeScreen/EventDetails'
-import MainToolBar from '../components/MainToolBar'
-import ScreenContainer from '../components/ScreenContainer'
-import SectionHeader from '../components/SectionHeader'
+import EventDetails from 'components/HomeScreen/EventDetails'
+import MainToolBar from 'components/MainToolBar'
+import ScreenContainer from 'components/ScreenContainer'
+import SectionHeader from 'components/SectionHeader'
 
 const events = {
     "Current Events": [
@@ -19,7 +19,7 @@ const events = {
     ]
 }
 
-class HomeScreen extends Component {
+export default class HomeScreen extends Component {
 
     constructor(props) {
         super(props);
@@ -77,5 +77,3 @@ const styles = StyleSheet.create({
     }
 
 });
-
-module.exports = HomeScreen
